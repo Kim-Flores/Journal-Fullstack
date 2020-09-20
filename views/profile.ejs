@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+   <header>
+    <h1 class="headerTitle">Daily Journal</h1>
+    <a href="/community" class="hdrBtn btn btn-default btn-sm">Community</a>
+    <a href="/write" class="hdrBtn btn btn-default btn-sm">Write Entry</a>
+   </header>
+
+    <div class="row">
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Your Profile</h3>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                    </p>
+                <a href="/logout" class="loginBtn btn btn-default btn-sm">Logout</a>
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+        <h3 class="entryTitle">Your Entries</h3>
+        <% for(var i=0; i<messages.length; i++) {%>
+          <% if (user.local.email == messages[i].name) { %>
+          <section class="messages">
+            <p><%= messages[i].name %></p>
+            <p><%= messages[i].title %></p>
+            <p><%= messages[i].date %></p>
+            <p><%= messages[i].msg %></p>
+            <img class="imgPost" src=<%= "" + messages[i].src %> >
+            <p><%= messages[i].heart %></p>
+            <p><%= messages[i].trash %></p>
+            <span><i class="fa fa-heart heart" aria-hidden="true" style="color:<%= messages[i].fav %>"></i></span>
+            <span data-id="<%= messages[i]._id %>"><i class="fa fa-trash trash" aria-hidden="true"></i></span>
+          </section>
+          <% } %>
+          <% } %>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

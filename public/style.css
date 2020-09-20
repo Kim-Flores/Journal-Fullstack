@@ -1,0 +1,175 @@
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Rubik', sans-serif;
+}
+
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background: url(img/bg3.png);
+}
+
+img{
+  height: 200px;
+}
+
+p{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+/* =========INDEX========= */
+.jumbotron{
+  background-color: #ffffffe8;
+  border: 10px double #7dd9ef;
+}
+
+.btnLogin{
+  background-color: #d1d15d;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.btnSign{
+  background-color: #eb702b;
+  font-weight: bold;
+}
+/* =========LOGIN========= */
+.form-control{
+  border: 3px solid #eb702b;
+}
+
+a{
+  color: #03A9F4;
+}
+
+.loginTitle, .signTitle{
+  background: #80808033;
+  width: 50%;
+  border-radius: 10px;
+  padding: 9px;
+}
+/* =========SIGNUP========= */
+
+/* =========PROFILE========= */
+.row{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+header{
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.headerTitle{
+  font-size: 50px;
+}
+.loginBtn{
+  background: #76d0e7ad;
+  border: 2px solid #50a6bb;
+}
+
+.hdrBtn{
+  margin-right: 20px;
+  background: #d1d15d;
+  font-weight: bold;
+  font-size: 15px;
+  border: 2px solid black;
+}
+
+.imgPost{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fa{
+  font-size: 20px;
+}
+.heart{
+  margin-right: 5px;
+}
+
+.well{
+  background: #b5e2ede3;
+  border: 5px solid #5bb9f0ad;
+  border-radius: 10px;
+}
+.entryTitle{
+  text-align: center;
+}
+
+.messages{
+  background: #ffffffcc;
+  padding: 10px;
+  color: #443b67;
+  border: 4px dashed #7dd9ef;
+  border-radius: 7px;
+  margin-bottom: 25px;
+}
+
+/* =========WRITE========= */
+
+.writeMsg{
+  border: 6px solid #8bddf1;
+  border-radius: 8px;
+  background: #fcfcfcba;
+  text-align: center;
+  margin-top: 80px;
+  padding-bottom: 15px;
+}
+
+.btn1, .btn2, .btn3, .btn4{
+  margin-right: 10px;
+  font-size:18px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.btn1{background: #fcda6e
+}
+
+.btn2{
+  background: #92dff1;
+}
+
+.btn3{
+  background: #f79cbd;
+}
+
+.btn4{
+  background: #eb702b;
+}
+input{
+  display: block;
+  margin-bottom: 22px;
+  border: 2px solid #f05b84;
+  border-radius: 5px;
+}
+
+textarea{
+  margin-bottom: 22px;
+  border: 2px solid #f05b84;
+  border-radius: 5px;
+}
+
+form{
+  display: inline-block;
+}
+
+.msgSubmit{
+  background: #d1d15d;
+  width: 40%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* =========COMMUNITY========= */
+
+.communityTitle{
+  text-align: center;
+  font-weight: bold;
+}

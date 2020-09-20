@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+   <header>
+    <h1 class="headerTitle">Daily Journal</h1>
+    <a href="/profile" class="btn1 btn btn-default btn-sm">Profile</a>
+    <a href="/write" class="btn2 btn btn-default btn-sm">Write Entry</a>
+    <a href="/logout" class="btn3 btn btn-default btn-sm">Logout</a>
+   </header>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+          <h2  class="communityTitle">Community Journal</h2>
+          <% for(var i=0; i<messages.length; i++) {%>
+            <section class="messages">
+              <p><%= messages[i].name %></p>
+              <p><%= messages[i].title %></p>
+              <p><%= messages[i].date %></p>
+              <p><%= messages[i].msg %></p>
+              <img class="imgPost" src=<%= "" + messages[i].src %> >
+              <p><%= messages[i].heart %></p>
+              <p><%= messages[i].trash %></p>
+              <span><i class="fa fa-heart heart" aria-hidden="true" style="color:<%= messages[i].fav %>"></i></span>
+              <span data-id="<%= messages[i]._id %>"><i class="fa fa-trash trash" aria-hidden="true"></i></span>
+            </section>
+            <% } %>
+    </div>
+  </div>
+<script src="community.js"></script>
+
+</body>
+</html>

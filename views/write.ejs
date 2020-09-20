@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+   <header>
+       <h1 class="headerTitle">Daily Journal</h1>
+    
+    <a href="/profile" class="btn1 btn btn-default btn-sm">Profile</a>
+    <a href="/community" class="btn2 btn btn-default btn-sm">Community</a>
+    <a href="/write" class="btn3 btn btn-default btn-sm">Write Entry</a>
+    <a href="/logout" class="btn4 btn btn-default btn-sm">Logout</a>
+   </header>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="writeMsg col-sm-6">
+          <h2>Add a message</h2>
+        <% if (user.local.email) { %>
+          <form action="/messages" method="POST">
+            <input class="hide" type="text" value="<%= user.local.email %>" name="name">
+            <input type="text"  placeholder="title" name="title">
+            <input type="date" name="date">
+            <textarea rows="5" cols="25" placeholder="How's it going?" name="msg"></textarea>
+            <input type="text" placeholder="photo url" name="src">
+            <button class="msgSubmit" type="submit">Submit</button>
+          </form>
+        </div>
+        <% } %> 
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
